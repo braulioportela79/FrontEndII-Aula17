@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+  --primary: #7898ff;
+  --secondary: #8e64c5;
+  --app-grey: #f2f2f2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background: linear-gradient(110deg, var(--primary), var(--secondary));
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  margin: auto;
+  width: 480px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card .additional {
+  position: absolute;
+  width: 170px;
+  height: 100%;
+  background: linear-gradient(var(--secondary), var(--primary));
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card .additional .user-card .gender,
+.card .additional .user-card .user-login {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .user-picture img {
+  top: 29%;
+  left: 15%;
+  border-radius: 50%;
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.card .additional .user-card .user-login {
+  top: 85%;
+}
+
+.card .general {
+  padding: 0 0.5rem 1rem 11rem;
+}
+
+.card .general .mail {
+  font-size: 0.9em;
+  padding-top: 0.9rem;
+  text-align: center;
+}
+
+.card .general p {
+  line-height: 1.1rem;
+}
+
+.btnContainer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.btnContainer button {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btnContainer button:hover {
+  background: rgba(255, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.btnContainer button:active {
+  transform: translateY(1px);
+}
+
+.loader {
+  border: 10px solid var(--primary);
+  border-top: 10px solid var(--app-grey);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  margin: auto;
+}
