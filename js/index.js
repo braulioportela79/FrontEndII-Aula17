@@ -32,7 +32,6 @@ function renderizarDadosUsuario(dados) {
     // Aqui devem desenvolver uma função que seja exibida na tela:
     // a foto, o nome completo do usuário e o e-mail.
     // Isto deve ser baseado nas informações que obtemos da API e inseridas no HTML.
-
     card.style.display = '';
     btn.style.display = '';
     loader.style.display = 'none';
